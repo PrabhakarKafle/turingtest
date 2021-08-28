@@ -1,0 +1,22 @@
+<button (click)="highlight1=true;">Component 1 </button>
+<button (click)="highlight2=true;">Component 2 </button>
+<button (click)="highlight3=true;">Component 3</button>
+
+<div *ngIf="emittedCompo">
+  <span *ngIf="emittedCompo===''"></span>
+  <p *ngIf="emittedCompo!==''"> {{emittedCompo}}</p>
+
+</div>
+
+<br /><br/><br/>
+<app-component1 [highlight]="highlight1" (agreed)="OnAgree($event)">
+
+</app-component1>
+
+<app-component2 [highlight]="highlight2" (agreed)="OnAgree($event)">
+
+</app-component2>
+
+<app-component3 [highlight]="highlight3" (agreed)="OnAgree($event)">
+
+</app-component3>
